@@ -3,31 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <title>Personal Growth Companion</title>
+    <!-- Link to external CSS file for styling -->
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
+    <!-- Main wrapper for the entire page content -->
     <div class="wrapper">
+        <!-- Header section containing the main title and user information -->
         <header class="site-header">
             <h1>My Personal Growth Companion</h1>
             <p class="user-greeting">Hello, Bartosz!</p>
-            <p class="entry-timestamp">Today's Entry: <time datetime="2023-04-15T14:30">Saturday, April 15th @ 2:30 PM</time></p>
+            <!-- Timestamp for the current entry -->
+            <p class="entry-timestamp">Today's Entry: <time datetime="2024-08-30T14:30">Friday, August 30th, 2024 @ 2:30 PM</time></p>
         </header>
 
+        <!-- Main content area divided into two columns -->
         <main class="content-area">
+            <!-- Left column containing inspiration, reflection, and gratitude sections -->
             <div class="left-column">
+                <!-- Inspiration section with a daily image and quote -->
                 <section class="inspiration-box">
                     <h2>Today's Spark</h2>
+                    <!-- Random nature image from Lorem Picsum -->
                     <img src="https://picsum.photos/400/300?nature" alt="Daily inspiration" class="inspiration-image">
+                    <!-- Daily inspirational quote -->
                     <blockquote class="daily-quote">
                         <p>"The future belongs to those who believe in the beauty of their dreams." - Eleanor Roosevelt</p>
                     </blockquote>
                 </section>
 
+                <!-- Reflection area for user's thoughts -->
                 <section class="reflection-area">
                     <h2>Reflect &amp; Grow</h2>
                     <textarea rows="6" placeholder="What's on your mind today?"></textarea>
                 </section>
 
+                <!-- Gratitude list for positive affirmations -->
                 <section class="gratitude-list">
                     <h2>Three Rays of Sunshine</h2>
                     <ol>
@@ -38,25 +49,33 @@
                 </section>
             </div>
 
+            <!-- Right column containing wellness tracking and goal sections -->
             <div class="right-column">
+                <!-- Wellness tracker section for sleep monitoring -->
                 <section class="wellness-tracker">
                     <h2>Wellness Check</h2>
                     <div class="sleep-log">
                         <label for="sleep-duration">Hours of restful sleep:</label>
                         <input type="number" id="sleep-duration" min="0" max="24" step="0.5" value="7.5">
+                        <!-- SVG circle for visual representation of sleep duration -->
                         <div class="sleep-quality">
                             <svg width="120" height="120" viewBox="0 0 120 120">
+                                <!-- Background circle -->
                                 <circle cx="60" cy="60" r="54" fill="none" stroke="#e0e0e0" stroke-width="12"/>
+                                <!-- Foreground circle representing sleep duration -->
                                 <circle cx="60" cy="60" r="54" fill="none" stroke="#4CAF50" stroke-width="12"
                                         stroke-dasharray="339.292" stroke-dashoffset="84.823"/>
+                                <!-- Text displaying sleep duration -->
                                 <text x="60" y="70" text-anchor="middle" fill="#333" font-size="24">7.5h</text>
                             </svg>
                         </div>
                     </div>
                 </section>
 
+                <!-- Emotion tracking section -->
                 <section class="emotion-palette">
                     <h2>Emotional Palette</h2>
+                    <!-- Checkboxes for selecting multiple emotions -->
                     <div class="mood-selectors">
                         <label><input type="checkbox" name="mood" value="joyful"> Joyful</label>
                         <label><input type="checkbox" name="mood" value="peaceful"> Peaceful</label>
@@ -67,11 +86,13 @@
                         <label><input type="checkbox" name="mood" value="frustrated"> Frustrated</label>
                         <label><input type="checkbox" name="mood" value="melancholy"> Melancholy</label>
                     </div>
+                    <!-- Visual representation of mood spectrum (to be styled with CSS) -->
                     <div class="mood-spectrum">
                         <div class="color-bar"></div>
                     </div>
                 </section>
 
+                <!-- Daily goals tracker -->
                 <section class="goal-tracker">
                     <h2>Today's Aspirations</h2>
                     <ul>
@@ -82,12 +103,16 @@
                     </ul>
                 </section>
 
+                <!-- Hydration tracking section -->
                 <section class="hydration-monitor">
                     <h2>Hydration Station</h2>
                     <label for="water-intake">Glasses of water (250ml each):</label>
                     <input type="number" id="water-intake" min="0" max="20" value="3">
+                    <!-- Visual representation of water intake -->
                     <div class="water-visual">
+                        <!-- Water level indicator (height controlled by CSS/JS) -->
                         <div class="water-level" style="height: 37.5%;"></div>
+                        <!-- Text showing current intake out of recommended 8 glasses -->
                         <p class="water-text">3/8</p>
                     </div>
                 </section>
